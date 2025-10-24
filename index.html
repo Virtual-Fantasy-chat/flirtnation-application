@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adult Chat Operator Application</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .form-container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+  }
+
+  h1 {
+    text-align: center;
+    color: #ff1493;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 20px;
+  }
+
+  .question {
+    margin-bottom: 20px;
+  }
+
+  .question h3 {
+    color: #ff69b4;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  label {
+    display: block;
+    background: #ffe4ec;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  label:hover {
+    background: #ffc0cb;
+  }
+
+  input[type="radio"] {
+    margin-right: 8px;
+  }
+
+  button {
+    width: 100%;
+    background: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 600;
+  }
+
+  button:hover {
+    background: #ff1493;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 15px;
+    color: #aaa;
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+  <h1>Flirt Nation Application</h1>
+  <p>Answer honestly to see if you qualify.</p>
+
+  <form id="adultForm">
+    <div class="question">
+      <h3>1. Are you at least 18 years old?</h3>
+      <label><input type="radio" name="q1" value="A" required> Yes</label>
+      <label><input type="radio" name="q1" value="B"> No</label>
+    </div>
+
+    <div class="question">
+      <h3>2. Do you understand that this role involves adult conversations?</h3>
+      <label><input type="radio" name="q2" value="A" required> Yes, and I’m comfortable</label>
+      <label><input type="radio" name="q2" value="B"> No</label>
+    </div>
+
+    <div class="question">
+      <h3>3. Are you familiar with online chat platforms?</h3>
+      <label><input type="radio" name="q3" value="A" required> Yes, very familiar</label>
+      <label><input type="radio" name="q3" value="B"> Somewhat familiar</label>
+      <label><input type="radio" name="q3" value="C"> Not familiar</label>
+    </div>
+
+    <div class="question">
+      <h3>4. How would you handle a disrespectful user?</h3>
+      <label><input type="radio" name="q4" value="A" required> Politely end the chat and report</label>
+      <label><input type="radio" name="q4" value="B"> Ignore and continue</label>
+      <label><input type="radio" name="q4" value="C"> Respond aggressively</label>
+    </div>
+
+    <div class="question">
+      <h3>5. Are you comfortable following consent and compliance rules?</h3>
+      <label><input type="radio" name="q5" value="A" required> Yes</label>
+      <label><input type="radio" name="q5" value="B"> No</label>
+    </div>
+
+    <div class="question">
+      <h3>6. Do you have prior experience in adult chat roles?</h3>
+      <label><input type="radio" name="q6" value="A" required> Yes, professional</label>
+      <label><input type="radio" name="q6" value="B"> Some informal experience</label>
+      <label><input type="radio" name="q6" value="C"> No experience</label>
+    </div>
+
+    <div class="question">
+      <h3>7. Can you maintain professionalism and emotional boundaries?</h3>
+      <label><input type="radio" name="q7" value="A" required> Yes</label>
+      <label><input type="radio" name="q7" value="B"> No</label>
+    </div>
+
+    <div class="question">
+      <h3>8. Are you comfortable verifying your age and identity?</h3>
+      <label><input type="radio" name="q8" value="A" required> Yes</label>
+      <label><input type="radio" name="q8" value="B"> No</label>
+    </div>
+
+    <button type="submit">Submit Application</button>
+  </form>
+
+  <div class="footer">© 2025 Production of flirtnation.com </div>
+</div>
+
+<script>
+  document.getElementById("adultForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // ✅ Replace this with your actual redirect URL
+    const redirectURL = "https://example.com/thankyou";
+
+    alert("Thank you for submitting your application!");
+    window.location.href = redirectURL;
+  });
+</script>
+
+</body>
+</html>
